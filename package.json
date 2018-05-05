@@ -3,5 +3,8 @@
   "version": "0.1.0",
   "description": "HackerNews api clone from howtographql.com",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.13.1"
+  }
 }
