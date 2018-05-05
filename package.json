@@ -1,0 +1,7 @@
+{
+  "name": "howtographql-news-api",
+  "version": "0.1.0",
+  "description": "HackerNews api clone from howtographql.com",
+  "main": "index.js",
+  "license": "MIT"
+}
