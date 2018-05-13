@@ -9,5 +9,3 @@ datamodel: ./datamodel.graphql
 
 # You can only access the API when providing JWTs that are signed with this secret
 secret: supersecret
-
-cluster: public-mirespirit-340/prisma-us1
