@@ -41,19 +41,22 @@ async function login(root, args, context, info) {
   };
 }
 
-function post(root, args, context, info) {
-  const userId = getUserId(context);
-  return context.db.mutation.createLink(
-    {
-      data: {
-        url: args.url,
-        description: args.description,
-        postedBy: { connect: { id: userId } }
-      }
-    },
-    info
-  );
+function post(parent, { url, description }, ctx, info) {
+  return ctx.db.mutation.createLink({ data: { url, description } }, info);
 }
+// function post(root, args, context, info) {
+//   const userId = getUserId(context);
+//   return context.db.mutation.createLink(
+//     {
+//       data: {
+//         url: args.url,
+//         description: args.description,
+//         postedBy: { connect: { id: userId } }
+//       }
+//     },
+//     info
+//   );
+// }
 
 async function vote(root, args, context, info) {
   const userId = getUserId(context);
